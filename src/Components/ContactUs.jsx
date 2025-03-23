@@ -14,7 +14,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="py-20 px-10 bg-[#1a1a1a] text-white min-h-screen flex justify-center items-center">
+    <div className="pt-30 px-10 bg-[#1a1a1a] text-white min-h-screen flex justify-center items-center">
       <div className="max-w-4xl w-full text-center">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}

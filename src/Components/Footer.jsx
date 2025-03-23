@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,10 +19,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="mt-2 space-y-2">
-              <li><a href="#" className="hover:text-gray-300">Home</a></li>
-              <li><a href="#" className="hover:text-gray-300">About</a></li>
-              <li><a href="#" className="hover:text-gray-300">Services</a></li>
-              <li><a href="#" className="hover:text-gray-300">Contact</a></li>
+              <li><Link to={""} className="hover:text-gray-300">Home</Link></li>
+              <li><Link to={"/aboutus"} className="hover:text-gray-300">About</Link></li>
+              <li><Link to={"/services"} className="hover:text-gray-300">Services</Link></li>
+              <li><Link to={"/contact"} className="hover:text-gray-300">Contact</Link></li>
             </ul>
           </div>
 
@@ -29,10 +30,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold">Follow Us</h3>
             <div className="flex justify-center md:justify-start space-x-4 mt-3">
-              <a href="#" className="text-gray-400 hover:text-white text-xl"><FaFacebook /></a>
-              <a href="#" className="text-gray-400 hover:text-white text-xl"><FaTwitter /></a>
-              <a href="#" className="text-gray-400 hover:text-white text-xl"><FaInstagram /></a>
-              <a href="#" className="text-gray-400 hover:text-white text-xl"><FaLinkedin /></a>
+              <Link to={"/"} className="text-gray-400 hover:text-white text-xl"><FaFacebook /></Link>
+              <Link to={"/"} className="text-gray-400 hover:text-white text-xl"><FaTwitter /></Link>
+              <Link to={"/"} className="text-gray-400 hover:text-white text-xl"><FaInstagram /></Link>
+              <Link to={"/"} className="text-gray-400 hover:text-white text-xl"><FaLinkedin /></Link>
             </div>
           </div>
         </div>
