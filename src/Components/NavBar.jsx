@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  const [hidden, setHidden] = useState(false);
+
+  
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    
+    const handleScroll = () => {
+      requestAnimationFrame(() => {
+        const isHidden = window.scrollY > lastScrollY;
+        if (hidden !== isHidden) setHidden(isHidden);
+        lastScrollY = window.scrollY;
+      });
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [hidden]);
   const navLinks = [
     { name: "Services", path: "/services" },
     { name: "Our work", path: "/ourwork" },
@@ -9,7 +27,11 @@ const NavBar = () => {
     { name: "Insights", path: "/insights" },
   ];
   return (
-    <div className="text-white fixed top-0 z-[999] bg-zinc-700 w-full  flex justify-between  border-b-[1px] border-zinc-100  items-center px-20 py-8">
+    <div
+      className={`text-white fixed top-0 z-[999] bg-zinc-700 w-full flex justify-between border-b-[1px] border-zinc-100 items-center px-20 py-8 transition-transform duration-100 ease-in-out ${
+        hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      }`}
+    >
       <div className="logo">
         <svg
           width="72"

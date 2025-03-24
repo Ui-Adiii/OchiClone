@@ -1,7 +1,6 @@
 import App from "./App";
 import NavBar from "./Components/NavBar";
 import NotFound from "./Components/NotFound";
-import Contact from "./Components/Contact";
 import Marquee from "./Components/Marquee";
 import About from "./Components/About";
 import Landing from "./Components/Landing";
@@ -30,5 +29,4 @@ export {
   Marquee,
   Landing,
   NotFound,
-  Contact,
 };
