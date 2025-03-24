@@ -16,7 +16,8 @@ const Landing = () => {
               initial={{width:0}}
               animate={{width:"9%"}}
               transition={{ease:[0.76, 0, 0.24, 1],duration:.7 ,delay:0.1}}
-              className="image-container bg-fixed h-[5.3vw] bg-red-300">
+              className="image-container bg-fixed h-[5.3vw] rounded-lg overflow-hidden bg-red-300">
+                <img src="https://images.unsplash.com/photo-1735755642421-2694d8bb8c07?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
               </motion.div>
             )}
             <h1 className="uppercase text-[7.5vw] font-bold leading-[6vw] tracking-tighter">
